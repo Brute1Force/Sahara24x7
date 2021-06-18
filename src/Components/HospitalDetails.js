@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { makeStyles, withStyles,ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
+import { makeStyles, withStyles, ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     button: {
         marginTop: 20
     },
+    multilineColor: {
+        color: 'green'
+    }
 }));
 
 const CssTextField = withStyles({
@@ -45,10 +48,10 @@ const CssTextField = withStyles({
 
 const theme = createMuiTheme({
     palette: {
-      primary: green,
+        primary: green,
     },
-  });
-  
+});
+
 
 const HospitalDetails = ({ props }) => {
 
@@ -83,117 +86,186 @@ const HospitalDetails = ({ props }) => {
             <Grid container spacing={3}>
                 <ThemeProvider theme={theme}>
                     <Grid item sm={6} lg={3}>
-                        <CssTextField id="mui-theme-provider-standard-input" disabled label="Facility Name" variant="outlined" value={hospitalDetails["Facility Name"] || ''} />
+                        <TextField id="mui-theme-provider-standard-input" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Facility Name" variant="outlined" value={hospitalDetails["Facility Name"] || ''} />
                     </Grid>
                 </ThemeProvider>
                 <Grid item sm={6} lg={3}>
                     <FormControl required>
-                        <TextField id="outlined-basic" disabled label="Address" variant="outlined" value={hospitalDetails.Address || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Address" variant="outlined" value={hospitalDetails.Address || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl required>
-                        <TextField id="standard-number" disabled label="Pin Code" type="number" variant="outlined" value={hospitalDetails["Pin Code"] || ''} />
+                        <TextField id="standard-number" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Pin Code" type="number" variant="outlined" value={hospitalDetails["Pin Code"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl required>
-                        <TextField id="outlined-basic" disabled label="City" variant="outlined" value={hospitalDetails.City || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="City" variant="outlined" value={hospitalDetails.City || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl required>
-                        <TextField id="outlined-basic" disabled label="State" variant="outlined" value={hospitalDetails.State || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="State" variant="outlined" value={hospitalDetails.State || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Contact Information" value={hospitalDetails["Contact Information"] || ''} variant="outlined" />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Contact Information" value={hospitalDetails["Contact Information"] || ''} variant="outlined" />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="standard-number" type="number" disabled label="Vacant Beds for COVID Patients" variant="outlined" value={hospitalDetails["Vacant Beds for COVID Patients"] || ''} />
+                        <TextField id="standard-number" type="number" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Vacant Beds for COVID Patients" variant="outlined" value={hospitalDetails["Vacant Beds for COVID Patients"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="standard-number" type="number" disabled label="Vacant ICU Beds" variant="outlined" value={hospitalDetails["Vacant ICU Beds"] || ''} />
+                        <TextField id="standard-number" type="number" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Vacant ICU Beds" variant="outlined" value={hospitalDetails["Vacant ICU Beds"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="standard-number" type="number" disabled label="Available Ventilators" variant="outlined" value={hospitalDetails["Available Ventilators"] || ''} />
+                        <TextField id="standard-number" type="number" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Available Ventilators" variant="outlined" value={hospitalDetails["Available Ventilators"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Oxygen Availability" variant="outlined" value={hospitalDetails["Oxygen Availability"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Oxygen Availability" variant="outlined" value={hospitalDetails["Oxygen Availability"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Last Update" variant="outlined" value={hospitalDetails["Last Update"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Last Update" variant="outlined" value={hospitalDetails["Last Update"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Remdesivir" variant="outlined" value={hospitalDetails["Remdesivir"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Remdesivir" variant="outlined" value={hospitalDetails["Remdesivir"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Favipiravir (also known as Avigan)" value={hospitalDetails["Favipiravir (also known as Avigan)"] || ''} variant="outlined" />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Favipiravir (also known as Avigan)" value={hospitalDetails["Favipiravir (also known as Avigan)"] || ''} variant="outlined" />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Molnupiravir" variant="outlined" value={hospitalDetails["Molnupiravir"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Molnupiravir" variant="outlined" value={hospitalDetails["Molnupiravir"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Recombinant ACE-2" variant="outlined" value={hospitalDetails["Recombinant ACE-2"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Recombinant ACE-2" variant="outlined" value={hospitalDetails["Recombinant ACE-2"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Deriphyllin R 300mg" variant="outlined" value={hospitalDetails["Deriphyllin R 300mg"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Deriphyllin R 300mg" variant="outlined" value={hospitalDetails["Deriphyllin R 300mg"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Nebulise 1mg" variant="outlined" value={hospitalDetails["Nebulise 1mg"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Nebulise 1mg" variant="outlined" value={hospitalDetails["Nebulise 1mg"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Duolin" variant="outlined" value={hospitalDetails["Duolin"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Duolin" variant="outlined" value={hospitalDetails["Duolin"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Medrol" variant="outlined" value={hospitalDetails["Medrol"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Medrol" variant="outlined" value={hospitalDetails["Medrol"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Colchicine" variant="outlined" value={hospitalDetails["Colchicine"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Colchicine" variant="outlined" value={hospitalDetails["Colchicine"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Ivepred" variant="outlined" value={hospitalDetails["Ivepred"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Ivepred" variant="outlined" value={hospitalDetails["Ivepred"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Inh foracort forte  ( Inhaler )" variant="outlined" value={hospitalDetails["Inh foracort forte  ( Inhaler )"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Inh foracort forte  ( Inhaler )" variant="outlined" value={hospitalDetails["Inh foracort forte  ( Inhaler )"] || ''} />
                     </FormControl>
                 </Grid>
                 <Grid item sm={6} lg={3}>
                     <FormControl>
-                        <TextField id="outlined-basic" disabled label="Cap Rosuva-gold 10" variant="outlined" value={hospitalDetails["Cap Rosuva-gold 10"] || ''} />
+                        <TextField id="outlined-basic" InputProps={{
+                            className: classes.multilineColor,
+                            readOnly: true
+                        }} label="Cap Rosuva-gold 10" variant="outlined" value={hospitalDetails["Cap Rosuva-gold 10"] || ''} />
                     </FormControl>
                 </Grid>
             </Grid>

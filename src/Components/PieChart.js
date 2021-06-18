@@ -48,37 +48,37 @@ const PieChart = () => {
                 label: '# of Votes',
                 data: chartData.number_of_hospitals,
                 backgroundColor: [
+                    'rgba(255, 99, 71)',
+                    'rgba(149, 99, 162)',
+                    'rgba(149, 255, 108)',
+                    'rgba(250, 104, 182)',
+                    'rgba(250, 207, 0)',
+                    'rgba(0, 182, 214)',
+                    'rgba(0, 247, 214)',
                     'rgb(255, 0, 0)',
                     'rgb(0, 0, 255)',
                     'rgb(60, 179, 113)',
                     'rgb(238, 130, 238)',
                     'rgb(255, 165, 0)',
                     'rgb(106, 90, 205)',
-                    'rgba(255, 99, 71, 1)',
-                    'rgba(149, 99, 162, 0.5)',
-                    'rgba(149, 255, 108, 0.3)',
-                    'rgba(250, 104, 182, 0.3)',
-                    'rgba(250, 207, 0, 0.3)',
-                    'rgba(0, 182, 214, 0.3)',
-                    'rgba(0, 247, 214, 0.3)',
                     'rgba(0, 0, 255, 0.1)',
                     'rgba(81, 157, 0, 0.1)',
                     'rgba(81, 157, 242, 0.5)'
                 ],
                 borderColor: [
+                    'rgba(255, 99, 71)',
+                    'rgba(149, 99, 162)',
+                    'rgba(149, 255, 108)',
+                    'rgba(250, 104, 182)',
+                    'rgba(250, 207, 0)',
+                    'rgba(0, 182, 214)',
+                    'rgba(0, 247, 214)',
                     'rgb(255, 0, 0)',
                     'rgb(0, 0, 255)',
                     'rgb(60, 179, 113)',
                     'rgb(238, 130, 238)',
                     'rgb(255, 165, 0)',
                     'rgb(106, 90, 205)',
-                    'rgba(255, 99, 71, 1)',
-                    'rgba(149, 99, 162, 0.5)',
-                    'rgba(149, 255, 108, 0.3)',
-                    'rgba(250, 104, 182, 0.3)',
-                    'rgba(250, 207, 0, 0.3)',
-                    'rgba(0, 182, 214, 0.3)',
-                    'rgba(0, 247, 214, 0.3)',
                     'rgba(0, 0, 255, 0.1)',
                     'rgba(81, 157, 0, 0.1)',
                     'rgba(81, 157, 242, 0.5)'
@@ -91,12 +91,12 @@ const PieChart = () => {
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
-                <Grid item lg={3}>
+                <Grid item lg={4}>
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item lg={4}>
                     <Pie data={data} />
                 </Grid>
-                <Grid item lg={3}>
+                <Grid item lg={4}>
                 </Grid>
             </Grid>
         </div>

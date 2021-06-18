@@ -10,6 +10,8 @@ import Grid from '@material-ui/core/Grid';
 import BarChar from './BarChar';
 import PieChart from './PieChart';
 
+import Image from '../Images/BackgroundImg.PNG';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -19,10 +21,16 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
-    text:{
+    text: {
         textAlign: 'center',
-    }
+    },
 }));
+
+const styles = {
+    paperContainer: {
+        backgroundImage: `url(${Image})`
+    }
+};
 
 const DashboardComp = () => {
 
@@ -30,21 +38,23 @@ const DashboardComp = () => {
 
     return (
         <div className={classes.root}>
-            <Grid container spacing={3}>
-                <Grid item lg={3}>
+            <Paper style={styles.paperContainer}>
+                <Grid container spacing={3}>
+                    <Grid item lg={3}>
+                    </Grid>
+                    <Grid item lg={3}>
+                        <CardComp />
+                    </Grid>
+                    <Grid item lg={3}>
+                        <CardComp2 />
+                    </Grid>
+                    <Grid item lg={3}>
+                    </Grid>
                 </Grid>
-                <Grid item lg={3}>
-                    <CardComp />
-                </Grid>
-                <Grid item lg={3}>
-                    <CardComp2 />
-                </Grid>
-                <Grid item lg={3}>
-                </Grid>
-            </Grid>
-            <h1 className={classes.text}>States - Number of hospitals</h1>
-            {/* <BarChar /> */}
-            <PieChart />
+                <h1 className={classes.text}>States - Number of hospitals</h1>
+                {/* <BarChar /> */}
+                <PieChart />
+            </Paper>
         </div>
     )
 }
